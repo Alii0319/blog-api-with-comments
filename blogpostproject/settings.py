@@ -13,7 +13,14 @@ SECRET_KEY = 'django-insecure-hk3#!+zjghxql@dd*%v1w%o$$1(*i(-z%m7j!-#%hixe*k(i3*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+
+ALLOWED_HOSTS = ["*",
+                 "blog-api-with-comments-production.up.railway.app"]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://blog-api-with-comments-production.up.railway.app",
+]
 
 
 # Application definition
