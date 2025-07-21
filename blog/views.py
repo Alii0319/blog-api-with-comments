@@ -10,7 +10,7 @@ class BlogViewSet(viewsets.ModelViewSet):
     queryset=Post.objects.all()
     serializer_class=PostSerializer
 
-    authentication_classes=[SessionAuthentication,TokenAuthentication]
+    authentication_classes=[TokenAuthentication]
     permission_classes=[IsAuthenticatedOrReadOnly]
     
     def perform_create(self, serializer):
@@ -21,7 +21,7 @@ class CommentsViewSet(viewsets.ModelViewSet):
     queryset=Comments.objects.all()
     serializer_class=CommentsSerializer
 
-    authentication_classes=[SessionAuthentication,TokenAuthentication]
+    authentication_classes=[TokenAuthentication]
     permission_classes=[IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
